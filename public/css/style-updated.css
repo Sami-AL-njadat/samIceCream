@@ -239,7 +239,6 @@
         background-image: url("../image/ss.jpg");
         background-size: cover;
         background-position: center;
-        /* filter: blur(3px); */
         transform: scale(1.01);
         z-index: -2;
     }
@@ -250,6 +249,12 @@
         inset: 0;
         z-index: -1;
         background-color: rgba(0, 0, 0, 0.247);
+    }
+
+    @media (max-width: 768px) {
+        body {
+            background-attachment: scroll;
+        }
     }
 
     /*  */
