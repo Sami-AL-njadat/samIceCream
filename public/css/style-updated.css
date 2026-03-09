@@ -212,34 +212,35 @@
     html,
     /* احذف body::before و body::after الحاليين وحط هاد */
 
-body {
-    margin: 0;
-    position: relative;
-    z-index: 0;
-    scroll-behavior: smooth;
-}
+    body {
+        margin: 0;
+        position: relative;
+        z-index: 0;
+        scroll-behavior: smooth;
+    }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("../image/ss.jpg");
-    background-size: cover;
-    background-position: center;
-    z-index: -2;
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url("../image/ss.jpg");
+        background-size: cover;
+        background-position: center;
+        z-index: -2;
 
-    /* هذا السطر هو اللي بيصلح المشكلة على الموبايل */
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
+        /* هذا السطر هو اللي بيصلح المشكلة على الموبايل */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
 
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, 0.247);
-}
+    body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.247);
+    }
+
     /* body { */
     /* width: 100%;
         height: 100%;
@@ -380,7 +381,7 @@ body::after {
     .hero-buttons {
         display: flex;
         gap: 1.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .btn-hero {
@@ -1691,7 +1692,7 @@ body::after {
 
         .slide {
             width: 100%;
-            height: 100%;
+            height: 90%;
             flex-shrink: 0;
             scroll-snap-align: start;
             display: flex;
@@ -1925,6 +1926,6 @@ body::after {
     }
 
 
-        .waytocontact{
-            color: white;
-        }
+    .waytocontact {
+        color: white;
+    }
