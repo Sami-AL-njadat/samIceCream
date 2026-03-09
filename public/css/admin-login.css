@@ -22,7 +22,7 @@
             justify-content: center;
             font-family: 'DM Sans', sans-serif;
             color: var(--text);
-            overflow: hidden;
+            /* overflow: hidden; */
         }
 
         /* ── background grid ── */

@@ -244,10 +244,13 @@
 
     /* ✅ إصلاح الفراغ الأبيض على الموبايل */
     @media (max-width: 768px) {
-        html, body {
+
+        html,
+        body {
             min-height: 100%;
             height: auto;
         }
+
         body::before,
         body::after {
             position: fixed;
@@ -256,6 +259,9 @@
             width: 100vw;
             height: 100vh;
             height: -webkit-fill-available;
+            background-size: cover;
+            background-position: center;
+
         }
     }
 

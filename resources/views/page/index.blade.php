@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chicago Ice Cream Truck | Sam IceCream Truck | Chicago, Batavia, Wheaton & St. Charles</title>
     <meta name="keywords"
-        content="Chicago ice cream, Ice cream truck, chicago, usa ,United States, batavia, Charles, St.Charles st.Batavia,Van ice cream, Wheaton ice cream, St. Charles,Glen Ellen,Glendal heights ,West Chicago,Naperville,Downers,chicago ice cream ,truck ice cream, Wheaton ice cream truck, Batavia ice cream truck">
+        content="Chicago ice cream, Ice cream truck, chicago, usa ,United States, batavia, Charles, St.Charles st.Batavia,Van ice cream, Wheaton ice cream, St. Charles,Glen Ellen,Glendal heights ,West Chicago,Naperville,Downers,chicago ice cream ,truck ice cream, Wheaton ice cream truck, Batavia ice cream truck,Lombard,Carol Stream ,Wheaton ,  Glendale Heights,Elmhurst,Addison, Bloomingdale, West Chicago,Naperville, Downers Grove, Lisle, Villa Park">
     <meta name="description"
-        content="Enjoy delicious ice cream in Chicago and surrounding areas. ,chicago ice cream, Find the best ice cream trucks in Wheaton, St. Charles, ,Glen Ellen,Glendal heights ,West Chicago,Naperville,Downers,and Batavia.,sam ice cream, truck,van,ice ,cream,chicago, usa ,United States,">
+        content="Enjoy delicious ice cream in Chicago and surrounding areas. ,chicago ice cream, Find the best ice cream trucks in Wheaton, St. Charles, ,Glen Ellen,Glendal heights ,West Chicago,Naperville,Downers,and Batavia.,sam ice cream, truck,van,ice ,cream,chicago, usa ,United States,Lombard,Carol Stream ,Wheaton ,  Glendale Heights,Elmhurst,Addison, Bloomingdale, West Chicago,Naperville, Downers Grove, Lisle, Villa Park">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <meta name="author" content="sami alnjadat">
@@ -128,7 +128,7 @@
     </footer>
 
     <!-- Scripts -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./javascript/sami.js"></script>
 
