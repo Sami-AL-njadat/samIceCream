@@ -10,7 +10,7 @@
                 <div class="col-lg-8">
                     <div class="about-content">
                         <h3>Sweet Memories on Wheels</h3>
-                        <p>Since 2015, Sam Ice Cream Truck has been bringing joy and delicious treats to communities
+                        <p>Since 2019, Sam Ice Cream Truck has been bringing joy and delicious treats to communities
                             across Chicago, Wheaton, St. Charles, and Batavia. We specialize in making your events
                             extra special with our wide selection of premium ice cream products.</p>
 

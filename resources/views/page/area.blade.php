@@ -52,7 +52,7 @@
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
                                 <a class="infocontact"
-                                    href="/cdn-cgi/l/email-protection#245745494d47414756414549505651474f0a474b49"><span>samicecreamtruck.com</span></a>
+                                    href="mailto:samicecream52@gmail.com"><span>samicecream52@gmail.com</span></a>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-clock"></i>
@@ -74,4 +74,3 @@
             </div>
         </div>
     </section>
-

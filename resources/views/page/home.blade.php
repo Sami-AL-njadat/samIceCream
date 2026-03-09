@@ -11,8 +11,12 @@
                             events, school
                             gatherings, and neighborhood fun 🚚🍦</p>
                         <div class="hero-buttons">
-                            <button class="btn-hero">Order Now</button>
-                            <button class="btn-hero">Call Now</button>
+                            <a href="#contact">
+                                <button class="btn-hero">Order Now</button>
+                            </a>
+                            <a href="tel:+17087458108">
+                                <button class="btn-hero">Call Now</button>
+                            </a>
                         </div>
                     </div>
 
@@ -103,8 +107,17 @@
                         <p>Enjoy our ice cream truck in Chicago, Wheaton, St. Charles, and Batavia! Perfect for
                             birthdays, corporate events, school gatherings, and neighborhood fun 🚚🍦</p>
                         <div class="hero-buttons">
-                            <button class="btn-hero">Order Now</button>
-                            <button class="btn-hero">Book Table</button>
+
+
+                            <div class="hero-buttons">
+                                <a href="#contact">
+                                    <button class="btn-hero">Order Now</button>
+                                </a>
+                                <a href="tel:+17087458108">
+                                    <button class="btn-hero">Call Now</button>
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -198,13 +211,19 @@
         <div class="choose-type">
             <div class="type-icons">
                 <div class="type-icon" title="Email">
-                    <i class="fas fa-envelope"></i>
+                    <a class="waytocontact" href="mailto:samicecream52@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
                 </div>
                 <div class="type-icon" title="Message">
-                    <i class="fas fa-message"></i>
+                    <a class="waytocontact" href="#contact">
+                        <i class="fas fa-message"></i>
+                    </a>
                 </div>
                 <div class="type-icon" title="Phone">
-                    <i class="fas fa-phone"></i>
+                    <a class="waytocontact" href="tel:+17087458108">
+                        <i class="fas fa-phone"></i>
+                    </a>
                 </div>
             </div>
         </div>
