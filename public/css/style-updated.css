@@ -209,7 +209,7 @@
         scroll-behavior: smooth;
     }
 
-    html,
+    /* html, */
     /* احذف body::before و body::after الحاليين وحط هاد */
 
     body {
@@ -1837,9 +1837,9 @@
             width: 415px;
         }
 
-        body::before {
+        /* body::before {
             background: #0a0a0a !important;
-        }
+        } */
 
         /* for delete after testing */
 
