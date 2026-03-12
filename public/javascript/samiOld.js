@@ -1,4 +1,14 @@
 // ========================================
+// ✅ إصلاح مشكلة 100vh على الموبايل
+// ========================================
+function setVH() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setVH();
+window.addEventListener('resize', setVH);
+
+// ========================================
 // Desktop Stack
 // ========================================
 const stack = document.getElementById('stack');
@@ -51,24 +61,26 @@ if (stack) {
         setTimeout(() => busy = false, 450);
     }
 
-    // stack.addEventListener('wheel', e => {
-    //     e.preventDefault();
-    //     e.deltaY > 0 ? next() : prev();
-    // }, { passive: false });
-
     stack.addEventListener('wheel', e => {
-
         if (!stack.matches(':hover')) return;
-
         e.preventDefault();
         e.deltaY > 0 ? next() : prev();
-
     }, { passive: false });
 
     let startY = 0;
-    stack.addEventListener('touchstart', e => { startY = e.touches[0].clientY; });
+    stack.addEventListener('touchstart', e => {
+        startY = e.touches[0].clientY;
+        e.stopPropagation();
+    }, { passive: true });
+
+    stack.addEventListener('touchmove', e => {
+        e.preventDefault();
+        e.stopPropagation();
+    }, { passive: false });
+
     stack.addEventListener('touchend', e => {
         const endY = e.changedTouches[0].clientY;
+        e.stopPropagation();
         if (startY - endY > 50) next();
         if (endY - startY > 50) prev();
     });
@@ -127,23 +139,27 @@ if (stackMobile) {
         setTimeout(() => busyMobile = false, 450);
     }
 
-    // stackMobile.addEventListener('wheel', e => {
-    //     e.preventDefault();
-    //     e.deltaY > 0 ? nextMobile() : prevMobile();
-    // }, { passive: false });
     stackMobile.addEventListener('wheel', e => {
-
         if (!stackMobile.matches(':hover')) return;
-
         e.preventDefault();
         e.deltaY > 0 ? nextMobile() : prevMobile();
-
     }, { passive: false });
 
+    // ✅ الإصلاح: منع الصفحة من السكرول عند التفاعل مع الـ stack
     let startYMobile = 0;
-    stackMobile.addEventListener('touchstart', e => { startYMobile = e.touches[0].clientY; });
+    stackMobile.addEventListener('touchstart', e => {
+        startYMobile = e.touches[0].clientY;
+        e.stopPropagation();
+    }, { passive: true });
+
+    stackMobile.addEventListener('touchmove', e => {
+        e.preventDefault();   // يمنع سكرول الصفحة
+        e.stopPropagation();  // يمنع وصول الحدث للـ slider
+    }, { passive: false });
+
     stackMobile.addEventListener('touchend', e => {
         const endY = e.changedTouches[0].clientY;
+        e.stopPropagation();
         if (startYMobile - endY > 50) nextMobile();
         if (endY - startYMobile > 50) prevMobile();
     });
@@ -287,7 +303,7 @@ if (productsWrapper && productsDotsContainer) {
 
                     }
 
-                    return;  
+                    return;
                 }
 
                 return response.json();
@@ -318,9 +334,9 @@ if (productsWrapper && productsDotsContainer) {
                 console.error(error);
 
             });
-     
 
     });
+
     if (resetBtn) {
 
         resetBtn.addEventListener('click', function () {
@@ -343,6 +359,3 @@ if (productsWrapper && productsDotsContainer) {
     }
 
 })();
-
-
-
