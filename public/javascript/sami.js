@@ -1,4 +1,14 @@
 // ========================================
+// ✅ إصلاح مشكلة 100vh على الموبايل
+// ========================================
+function setVH() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setVH();
+window.addEventListener('resize', setVH);
+
+// ========================================
 // Desktop Stack
 // ========================================
 const stack = document.getElementById('stack');

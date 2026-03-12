@@ -226,7 +226,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url("../image/ss.jpg");
+        background-image: url("../image/ss.webp");
         background-size: cover;
         background-position: center;
         z-index: -2;
@@ -1659,6 +1659,10 @@
             width: 149px;
         }
 
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1) !important;
+        }
+
         .products-scroll-wrapper::-webkit-scrollbar {
             height: 0px !important;
 
@@ -1733,7 +1737,7 @@
         /* Slider Dots */
         .slider-dots {
             position: absolute;
-            bottom: 20px;
+            bottom: 2px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -1832,6 +1836,12 @@
         .hero-images {
             width: 415px;
         }
+
+        body::before {
+            background: #0a0a0a !important;
+        }
+
+        /* for delete after testing */
 
         .products-scroll-wrapper {
             gap: 1rem;

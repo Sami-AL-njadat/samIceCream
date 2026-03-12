@@ -31,7 +31,7 @@
         <div class="preloader-bottom"></div>
         <div class="preloader-content">
             <div class="preloader-logo-wrap">
-                <img src="./image/imagecontact.jpg" alt="Sam Ice Cream Truck" class="preloader-img">
+                <img src="./image/imagecontact.webp" alt="Sam Ice Cream Truck" class="preloader-img">
                 <div class="preloader-logo-ring"></div>
                 <div class="preloader-logo-ring ring-2"></div>
             </div>
@@ -50,7 +50,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img class="img-logo" src="./image/logonav2.png" alt="Sam Ice Cream Truck">
+                <img class="img-logo" src="./image/logonav2.webp" alt="Sam Ice Cream Truck">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
@@ -99,7 +99,7 @@
                 <div class="col-md-4">
                     <h4>Sam Ice Cream Truck</h4>
                     <p>Bringing smiles and sweet treats to your events since 2019.</p>
-                    <img class="image-footer" src="./image/logonav2.png" alt="">
+                    <img class="image-footer" src="./image/logonav2.webp" alt="">
                 </div>
                 <div class="col-md-4">
                     <h4>Quick Links</h4>

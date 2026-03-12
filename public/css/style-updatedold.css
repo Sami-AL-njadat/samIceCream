@@ -223,7 +223,7 @@
         content: "";
         position: fixed;
         inset: 0;
-        background-image: url("../image/ss.jpg");
+        background-image: url("../image/ss.webp");
         background-size: cover;
         background-position: center;
         z-index: -2;

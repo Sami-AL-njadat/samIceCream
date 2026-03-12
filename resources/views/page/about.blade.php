@@ -49,7 +49,7 @@
 
                 <div class="col-lg-4">
                     <div class="about-image-wrapper">
-                        <img src="./image/ABOUTIMG.png" alt="Sam Ice Cream Truck" class="about-image">
+                        <img src="./image/ABOUTIMG.webp" alt="Sam Ice Cream Truck" class="about-image">
                         <div class="image-decoration"></div>
                     </div>
                 </div>
