@@ -1,5 +1,5 @@
     /* ============================================
-       PRELOADER
+       PRELOADER 2026/03/13 - Updated with new design and animations
     ============================================ */
 
     #preloader {
@@ -1836,11 +1836,7 @@
             width: 415px;
         }
 
-        body::before {
-            background: #0a0a0a !important;
-        }
 
-        /* for delete after testing */
 
         .products-scroll-wrapper {
             gap: 1rem;
