@@ -11,7 +11,7 @@
         content="Enjoy delicious ice cream in Chicago and surrounding areas. ,chicago ice cream, Find the best ice cream trucks in Wheaton, St. Charles, ,Glen Ellen,Glendal heights ,West Chicago,Naperville,Downers,and Batavia.,sam ice cream, truck,van,ice ,cream,chicago, usa ,United States,Lombard,Carol Stream ,Wheaton ,  Glendale Heights,Elmhurst,Addison, Bloomingdale, West Chicago,Naperville, Downers Grove, Lisle, Villa Park">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{ asset('./image/imagecontact.webp') }}" type="image/x-icon" />
-
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://sam-ice-cream-truck.com/sitemap.xml" />
     <meta name="author" content="sami alnjadat">
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">

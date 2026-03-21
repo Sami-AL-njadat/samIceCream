@@ -51,8 +51,7 @@
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
-                                <a 
-                                    href="mailto:samicecream52@gmail.com">
+                                <a href="mailto:samicecream52@gmail.com">
                                     <span class="infocontact">samicecream52@<span>gmail.com</span>
                                     </span></a>
                             </div>
