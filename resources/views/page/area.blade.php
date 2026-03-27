@@ -66,7 +66,7 @@
                 <div class="col-lg-6">
                     <div class="map-wrapper">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190255.26356333735!2d-88.2527!3d41.8781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1234567890"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11886.249882081729!2d-88.11710210000001!3d41.8592434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e5516997b8321%3A0xb6bbb17c02eecec4!2sWheaton%20ice%20cream%20truck!5e0!3m2!1sen!2sjo!4v1774621705346!5m2!1sen!2sjo"
                             width="100%" height="100%" style="border:0; border-radius: 20px;" allowfullscreen=""
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
@@ -79,30 +79,33 @@
                             <button type="button" class="location-gallery-item" data-gallery-item
                                 data-src="{{ asset('image/customer/Wheaton-Chicagos-sam-ice-cream.webp') }}"
                                 aria-label="Open Chicago Ice Cream Truck photo">
-                                <img loading="lazy"  src="{{ asset('image/customer/Wheaton-Chicagos-sam-ice-cream.webp') }}"
+                                <img loading="lazy"
+                                    src="{{ asset('image/customer/Wheaton-Chicagos-sam-ice-cream.webp') }}"
                                     alt="Chicago Ice Cream Truck">
                             </button>
                             <button type="button" class="location-gallery-item" data-gallery-item
                                 data-src="{{ asset('image/customer/chicago-iceCream.webp') }}"
                                 aria-label="Open Chicago Ice Cream photo">
-                                <img  loading="lazy" src="{{ asset('image/customer/chicago-iceCream.webp') }}" alt="Chicago Ice Cream">
+                                <img loading="lazy" src="{{ asset('image/customer/chicago-iceCream.webp') }}"
+                                    alt="Chicago Ice Cream">
                             </button>
                             <button type="button" class="location-gallery-item" data-gallery-item
                                 data-src="{{ asset('image/customer/sam-ice-cream-truck.webp') }}"
                                 aria-label="Open Sam Ice Cream Truck photo">
-                                <img  loading="lazy" src="{{ asset('image/customer/sam-ice-cream-truck.webp') }}"
+                                <img loading="lazy" src="{{ asset('image/customer/sam-ice-cream-truck.webp') }}"
                                     alt="Sam Ice Cream Truck">
                             </button>
                             <button type="button" class="location-gallery-item" data-gallery-item
                                 data-src="{{ asset('image/customer/Wheaton-ice-cream-truck-ice.webp') }}"
                                 aria-label="Open Wheaton Ice Cream Truck photo">
-                                <img  loading="lazy" src="{{ asset('image/customer/Wheaton-ice-cream-truck-ice.webp') }}"
+                                <img loading="lazy" src="{{ asset('image/customer/Wheaton-ice-cream-truck-ice.webp') }}"
                                     alt="Wheaton Ice Cream Truck">
                             </button>
                             <button type="button" class="location-gallery-item" data-gallery-item
                                 data-src="{{ asset('image/customer/chicago-Wheaton.webp') }}"
                                 aria-label="Open Chicago Wheaton photo">
-                                <img  loading="lazy" src="{{ asset('image/customer/chicago-Wheaton.webp') }}" alt="Chicago Wheaton">
+                                <img loading="lazy" src="{{ asset('image/customer/chicago-Wheaton.webp') }}"
+                                    alt="Chicago Wheaton">
                             </button>
                             <button type="button" class="location-gallery-item" data-gallery-item
                                 data-src="{{ asset('image/customer/sam-truck.webp') }}"
