@@ -9,7 +9,11 @@
                         <p>Enjoy our ice cream truck in Chicago, Wheaton, St. Charles, and Batavia! Perfect for
                             birthdays, corporate
                             events, school
-                            gatherings, and neighborhood fun 🚚🍦</p>
+                            gatherings, and neighborhood fun 🚚🍦
+                            <a class="waytocontact" href="tel:+17087458108">
+                                <i class="fas fa-phone nav-phone"> +170-8745-8108</i>
+                            </a>    
+                        </p>
                         <div class="hero-buttons">
                             <a href="#contact">
                                 <button class="btn-hero">Order Now</button>
@@ -105,7 +109,12 @@
                     <div class="hero-left">
                         <h1>Sam Ice <br>Cream Truck</h1>
                         <p>Enjoy our ice cream truck in Chicago, Wheaton, St. Charles, and Batavia! Perfect for
-                            birthdays, corporate events, school gatherings, and neighborhood fun 🚚🍦</p>
+                            birthdays, corporate events, school gatherings, and neighborhood fun 🚚🍦
+                            <a class="waytocontact" href="tel:+17087458108">
+                                <i class="fas fa-phone nav-phone"> +170-8745-8108</i>
+                            </a>
+                        </p>
+
                         <div class="hero-buttons">
 
 
@@ -147,7 +156,9 @@
                                 </div>
                                 <div class="review-text">
                                     Make your child's birthday unforgettable! We bring the sweetness directly to your
-                                    door.
+                                    door. <a class="waytocontact" href="tel:+17087458108">
+                                        <i class="fas fa-phone">+17087458108</i>
+                                    </a>
                                 </div>
                             </div>
 
