@@ -21,9 +21,11 @@
             color: var(--muted);
             display: none;
         }
+
         .search-bar.loading .search-loading {
             display: block;
         }
+
         .search-bar.loading .fa-magnifying-glass {
             display: none;
         }
@@ -38,7 +40,10 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-brand">
                 <div class="brand-logo">
-                    <div class="brand-icon">🍦</div>
+                    <div class="brand-icon">
+
+                        <img src="/image/ABOUTIMG.webp" alt="icecreamlogo">
+                    </div>
                     <div class="brand-text">
                         <h3>Sam Ice Cream</h3>
                         <span>Admin Panel</span>
@@ -144,7 +149,8 @@
                 <div class="search-bar" id="searchBar">
                     <i class="fas fa-magnifying-glass"></i>
                     <i class="fas fa-spinner fa-spin search-loading"></i>
-                    <input type="text" id="searchInput" placeholder="Search by name, email or message…" autocomplete="off">
+                    <input type="text" id="searchInput" placeholder="Search by name, email or message…"
+                        autocomplete="off">
                 </div>
 
                 <!-- Messages Table -->
@@ -169,7 +175,8 @@
                         </table>
                     </div>
 
-                    <div class="empty-state" id="emptyState" style="{{ $messages->count() > 0 ? 'display: none;' : '' }}">
+                    <div class="empty-state" id="emptyState"
+                        style="{{ $messages->count() > 0 ? 'display: none;' : '' }}">
                         <div class="empty-icon">📭</div>
                         <p>No messages found</p>
                     </div>
@@ -236,6 +243,19 @@
         let currentMessageId = null;
         let searchTimeout = null;
 
+        /** Match PHP: resources/views/admin/partials/message-rows.blade.php (M j, Y · H:i) */
+        function formatInboxDate(iso) {
+            const d = new Date(iso);
+            const mon = d.toLocaleDateString('en-US', {
+                month: 'short'
+            });
+            const day = d.getDate();
+            const y = d.getFullYear();
+            const h = String(d.getHours()).padStart(2, '0');
+            const min = String(d.getMinutes()).padStart(2, '0');
+            return `${mon} ${day}, ${y} · ${h}:${min}`;
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Set current date
             const now = new Date();
@@ -253,13 +273,13 @@
 
             searchInput.addEventListener('input', function() {
                 const query = this.value.trim();
-                
+
                 // Clear previous timeout
                 clearTimeout(searchTimeout);
-                
+
                 // Show loading
                 searchBar.classList.add('loading');
-                
+
                 // Set new timeout
                 searchTimeout = setTimeout(() => {
                     if (query.length === 0) {
@@ -321,24 +341,25 @@
         // ============================================
         async function searchMessages(query) {
             try {
-                const response = await fetch(`{{ route('admin.messages.search.ajax') }}?q=${encodeURIComponent(query)}`, {
-                    headers: {
-                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
-                        'Accept': 'application/json'
-                    }
-                });
-                
+                const response = await fetch(
+                    `{{ route('admin.messages.search.ajax') }}?q=${encodeURIComponent(query)}`, {
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                            'Accept': 'application/json'
+                        }
+                    });
+
                 const data = await response.json();
-                
+
                 // Update messages array
                 messages = data.messages;
-                
+
                 // Update table
                 updateTable(data.messages);
-                
+
                 // Update stats
                 updateStats(data.stats);
-                
+
             } catch (error) {
                 console.error('Search error:', error);
             } finally {
@@ -355,18 +376,18 @@
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 const data = await response.json();
-                
+
                 // Update messages array
                 messages = data.messages;
-                
+
                 // Update table
                 updateTable(data.messages);
-                
+
                 // Update stats
                 updateStats(data.stats);
-                
+
             } catch (error) {
                 console.error('Load error:', error);
             } finally {
@@ -385,19 +406,19 @@
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 const data = await response.json();
-                
+
                 if (response.ok) {
                     // Update message in local array
                     const message = messages.find(m => m.id === id);
                     if (message) {
                         message.status = 'read';
                     }
-                    
+
                     // Update UI
                     updateMessageStatus(id, 'read');
-                    
+
                     // Update stats from response
                     if (data.stats) {
                         updateStats(data.stats);
@@ -418,24 +439,24 @@
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 const data = await response.json();
-                
+
                 if (response.ok) {
                     // Update all messages in local array
                     messages.forEach(m => m.status = 'read');
-                    
+
                     // Update all rows in table
                     document.querySelectorAll('tr[data-id]').forEach(row => {
                         const id = row.dataset.id;
                         updateMessageStatus(id, 'read');
                     });
-                    
+
                     // Update stats from response
                     if (data.stats) {
                         updateStats(data.stats);
                     }
-                    
+
                     showNotification('All messages marked as read', 'success');
                 }
             } catch (error) {
@@ -455,27 +476,27 @@
                         'Accept': 'application/json'
                     }
                 });
-                
+
                 const data = await response.json();
-                
+
                 if (response.ok) {
                     // Remove from messages array
                     messages = messages.filter(m => m.id !== currentMessageId);
-                    
+
                     // Remove row from table
                     const row = document.querySelector(`tr[data-id="${currentMessageId}"]`);
                     if (row) row.remove();
-                    
+
                     // Check if table is empty
                     if (messages.length === 0) {
                         document.getElementById('emptyState').style.display = 'block';
                     }
-                    
+
                     // Update stats from response
                     if (data.stats) {
                         updateStats(data.stats);
                     }
-                    
+
                     showNotification('Message deleted successfully', 'success');
                 }
             } catch (error) {
@@ -493,25 +514,20 @@
         function updateTable(newMessages) {
             const tbody = document.getElementById('tableBody');
             const emptyState = document.getElementById('emptyState');
-            
+
             if (newMessages.length === 0) {
                 tbody.innerHTML = '';
                 emptyState.style.display = 'block';
                 return;
             }
-            
+
             emptyState.style.display = 'none';
-            
+
             let html = '';
             newMessages.forEach((msg, index) => {
                 const preview = msg.message.length > 55 ? msg.message.substring(0, 55) + '…' : msg.message;
-                const date = new Date(msg.created_at).toLocaleDateString('en-US', {
-                    month: 'short',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                });
-                
+                const date = formatInboxDate(msg.created_at);
+
                 html += `
                     <tr data-id="${msg.id}">
                         <td style="color:var(--muted);font-size:0.78rem">${index + 1}</td>
@@ -541,7 +557,7 @@
                     </tr>
                 `;
             });
-            
+
             tbody.innerHTML = html;
         }
 
@@ -556,14 +572,14 @@
         function updateMessageStatus(id, status) {
             const row = document.querySelector(`tr[data-id="${id}"]`);
             if (!row) return;
-            
+
             const nameCell = row.querySelector('.td-name');
             if (status === 'read') {
                 nameCell.style.color = '';
                 const dot = nameCell.querySelector('span');
                 if (dot) dot.remove();
             }
-            
+
             const badge = row.querySelector('.badge');
             badge.className = `badge ${status === 'read' ? 'badge-read' : 'badge-new'}`;
             badge.textContent = status === 'read' ? 'Read' : '● New';
@@ -581,12 +597,7 @@
             document.getElementById('modalName').textContent = message.name;
             document.getElementById('modalEmail').textContent = message.email;
             document.getElementById('modalPhone').textContent = message.phone;
-            document.getElementById('modalDate').textContent = new Date(message.created_at).toLocaleDateString('en-US', {
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            });
+            document.getElementById('modalDate').textContent = formatInboxDate(message.created_at);
             document.getElementById('modalMessage').textContent = message.message;
 
             // Mark as read if unread

@@ -15,7 +15,7 @@
             {{ $message->status == 'read' ? 'Read' : '● New' }}
         </span>
     </td>
-    <td class="td-date">{{ $message->created_at->format('M d · H:i') }}</td>
+    <td class="td-date">{{ $message->created_at->format('M j, Y · H:i') }}</td>
     <td>
         <div class="td-actions">
             <button class="btn-action btn-view" title="View message" onclick="openModal({{ $message->id }})">

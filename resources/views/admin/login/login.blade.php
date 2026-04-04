@@ -21,7 +21,8 @@
     <div class="login-wrapper">
 
         <div class="login-logo">
-            <div class="logo-icon">🍦</div>
+
+            <div class="logo-icon"> <img  src="/image/ABOUTIMG.webp" alt="icecreamlogo"></div>
             <h1>Sam Ice <span>Cream</span></h1>
             <p>Admin Dashboard</p>
         </div>
@@ -56,7 +57,7 @@
                     </button>
 
                 </div>
-                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
 
                 <button type="submit" class="btn-login">
