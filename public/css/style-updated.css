@@ -1860,8 +1860,8 @@
 
         .gallery-modal {
             padding: 1rem 0.5rem 4.5rem;
-            transform: translateY(144%);
-            height: 40%;
+            transform: translateY(121%);
+            height: 45%;
         }
 
         .navbar-toggler-icon {
