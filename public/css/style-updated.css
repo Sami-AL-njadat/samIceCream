@@ -1180,22 +1180,36 @@
         align-items: flex-start;
         gap: 1rem;
         padding: 1.5rem;
-        background: rgb(0 0 0 / 41%);
+        background:
+            radial-gradient(ellipse 120% 80% at 10% 20%, rgba(255, 107, 157, 0.14) 0%, transparent 55%),
+            rgba(0, 0, 0, 0.38);
         border-radius: 12px;
         margin-bottom: 1rem;
         transition: all 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .area-item:hover {
-        background: rgba(255, 255, 255, 0.886);
-        transform: translateX(10px);
-        color: rgba(0, 0, 0, 0.886);
+        background:
+            radial-gradient(ellipse 120% 80% at 10% 20%, rgba(255, 107, 157, 0.22) 0%, transparent 55%),
+            rgba(255, 255, 255, 0.14);
+        transform: translateY(-4px);
+        border-color: rgba(255, 107, 157, 0.35);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
     }
 
     .area-item i {
         color: #ff6b9d;
-        font-size: 1.5rem;
-        margin-top: 0.3rem;
+        font-size: 1.05rem;
+        margin-top: 0.15rem;
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
     }
 
     .area-item h4 {
@@ -1207,6 +1221,30 @@
     .area-item p {
         margin: 0;
         opacity: 0.9;
+    }
+
+    .service-areas {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 1.25rem;
+    }
+
+    .service-areas .area-item {
+        margin-bottom: 0;
+        height: 100%;
+    }
+
+    .service-areas .area-item h4 {
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+    }
+
+    .service-areas .area-item p {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.92rem;
+        line-height: 1.35;
     }
 
     .location-contact {
@@ -1241,6 +1279,10 @@
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .location-under-map {
+        margin-top: 1.5rem;
     }
 
     .location-gallery-card {
@@ -1529,6 +1571,7 @@
         font-size: 0.97rem;
         font-weight: 400;
         outline: none;
+        appearance: none;
         -webkit-appearance: none;
         transition:
             border-color 0.35s ease,
@@ -1983,6 +2026,14 @@
             margin-top: 2rem;
         }
 
+        .location-under-map {
+            margin-top: 1rem;
+        }
+
+        .service-areas {
+            grid-template-columns: 1fr;
+        }
+
         .location-gallery-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -2053,8 +2104,8 @@
 
         .gallery-modal {
             padding: 1rem 0.5rem 4.5rem;
-            transform: translateY(271%);
-            height: 27%;
+            transform: translateY(215%);
+            height: 31%;
         }
 
         .gallery-modal-stage {
